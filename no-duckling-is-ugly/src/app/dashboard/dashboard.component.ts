@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import {DataServiceService} from '../data-service.service';
+import {BullyEvent} from '../bully-event';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  events: BullyEvent[];
+  cols: any[];
+
+
+
+  constructor() {}
 
   ngOnInit() {
+    this.cols = [
+      { field: 'bully', header: 'Bully'},
+      { field: 'victim', header: 'Victim'},
+      { field: 'statement', header: 'Statement'},
+      { field: 'time', header: 'Time'},
+      { field: 'bystanders', header: 'Bystanders'}
+    ];
   }
 
 }

@@ -7,7 +7,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassroomComponent } from './classroom/classroom.component';
 import { HistoryComponent } from './history/history.component';
 import { AnalysisComponent } from './analysis/analysis.component';
-
+import { TableModule } from 'primeng/table';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,10 @@ import { AnalysisComponent } from './analysis/analysis.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    TableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
